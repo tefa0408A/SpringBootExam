@@ -1,6 +1,8 @@
 package com.example.SpringBootExam.controller;
 
+import com.example.SpringBootExam.entity.PedidosEntity;
 import com.example.SpringBootExam.entity.PersonaEntity;
+import com.example.SpringBootExam.service.PedidoService;
 import com.example.SpringBootExam.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,6 +17,9 @@ public class PersonaController {
 
     @Autowired
     private PersonaService personaService;
+
+    @Autowired
+    private PedidoService pedidoService;
 
     @PostMapping("/v1/crear")
     public ResponseEntity<PersonaEntity> crearPersona(@RequestBody PersonaEntity persona){

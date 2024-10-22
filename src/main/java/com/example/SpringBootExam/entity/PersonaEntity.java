@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "persona")
 @Getter
@@ -25,6 +27,9 @@ public class PersonaEntity {
     @OneToOne(cascade = {CascadeType.MERGE,CascadeType.PERSIST})
     @JoinColumn(name = "direccion_id", referencedColumnName = "id")
     private DireccionEntity direccionEntity;
+
+    @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
+    private List<PedidosEntity> pedidos;
 
 
 }

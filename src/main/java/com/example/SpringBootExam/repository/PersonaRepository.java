@@ -1,5 +1,6 @@
 package com.example.SpringBootExam.repository;
 
+import com.example.SpringBootExam.entity.PedidosEntity;
 import com.example.SpringBootExam.entity.PersonaEntity;
 import com.example.SpringBootExam.entity.PersonaEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
